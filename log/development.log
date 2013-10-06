@@ -964,3 +964,84 @@ Processing by PostsController#index as HTML
   Rendered layouts/_navigation.html.erb (0.3ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-06 16:55:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 284ms (Views: 238.9ms | ActiveRecord: 0.0ms)
+  [1m[36mPost Load (40.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (12.0ms)[0m  [1mINSERT INTO "posts" ("created_at", "title", "updated_at", "url") VALUES (?, ?, ?, ?)[0m  [["created_at", Sun, 06 Oct 2013 22:14:06 UTC +00:00], ["title", "in the beginning"], ["updated_at", Sun, 06 Oct 2013 22:14:06 UTC +00:00], ["url", "www.yahoo.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (2.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  UPDATE "posts" SET "user_id" = ?, "updated_at" = ? WHERE "posts"."id" = 1  [["user_id", 1], ["updated_at", Sun, 06 Oct 2013 22:14:52 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 06 Oct 2013 22:15:39 UTC +00:00], ["updated_at", Sun, 06 Oct 2013 22:15:39 UTC +00:00], ["username", "Marv"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mPost Load (42.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (7.0ms)[0m  [1mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = 1[0m  [["description", "This is my post"], ["updated_at", Sun, 06 Oct 2013 22:27:44 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategory (20131006224259)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131006224259"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePostCategories (20131006224523)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "post_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131006224523"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT 1[0m
+  [1m[35mPostCategory Load (4.4ms)[0m  SELECT "post_categories".* FROM "post_categories" WHERE "post_categories"."post_id" = ?  [["post_id", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (11.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 06 Oct 2013 22:54:35 UTC +00:00], ["updated_at", Sun, 06 Oct 2013 22:54:35 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mUPDATE "categories" SET "name" = ?, "updated_at" = ? WHERE "categories"."id" = 1[0m  [["name", "Ruby"], ["updated_at", Sun, 06 Oct 2013 22:56:00 UTC +00:00]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mPostCategory Load (4.1ms)[0m  SELECT "post_categories".* FROM "post_categories" WHERE "post_categories"."category_id" = ?  [["category_id", 1]]
+  [1m[36mCategory Load (34.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (30.4ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (34.9ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" INNER JOIN "post_categories" ON "posts"."id" = "post_categories"."post_id" WHERE "post_categories"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "post_categories" ON "categories"."id" = "post_categories"."category_id" WHERE "post_categories"."post_id" = ?  [["post_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "post_categories" ("category_id", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)  [["category_id", 1], ["created_at", Sun, 06 Oct 2013 23:11:26 UTC +00:00], ["post_id", 1], ["updated_at", Sun, 06 Oct 2013 23:11:26 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[36mComment Load (6.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mPost Load (4.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.6ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["body", "this is good"], ["created_at", Sun, 06 Oct 2013 23:25:44 UTC +00:00], ["updated_at", Sun, 06 Oct 2013 23:25:44 UTC +00:00], ["user_id", 1]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [[nil, 1]]
+SQLite3::SQLException: no such column: comments.post_id: SELECT "comments".* FROM "comments"  WHERE "comments"."post_id" = ?
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?  [["user_id", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT 1[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [[nil, 1]]
+SQLite3::SQLException: no such column: comments.post_id: SELECT "comments".* FROM "comments"  WHERE "comments"."post_id" = ?
