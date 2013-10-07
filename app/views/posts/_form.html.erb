@@ -1,0 +1,14 @@
+<%= render 'shared/errors', obj: @post %>
+
+<%= form_for @post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br/>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+  <br/>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br/>
+  <%= f.submit "Create Post" %>
+<% end %>

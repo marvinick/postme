@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
   end
 
   def new
@@ -12,23 +13,29 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(post_params)
+    @post = Post.new(post_params)
 
-    if post.save
+    if @post.save
       flash[:notice] = "Your post was saved."
       redirect_to posts_path
 
     else
-
+      render :new
     end
   end
 
   def edit
-
+    @post = Post.find(params[:id])
   end
 
   def update
-
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      flash[:notice] = "This post was updated!"
+      redirect_to post_path
+    else
+      render :edit
+    end
   end
 
   private

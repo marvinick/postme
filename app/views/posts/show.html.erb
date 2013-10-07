@@ -1,2 +1,15 @@
 <h4>Showing Posts</h4>
 <%= @post.title %>
+
+<%= form_for [@post, @comment] do |f| %>
+  <%= f.text_area :body %>
+  <br/>
+  <%= f.submit "Create Comment" %>
+<% end %>
+
+<h5>Comments:</h5>
+<ul>
+  <% @post.comments.each do |comment| %>
+    <li><% comment.body %></li>
+  <% end %>
+</ul>
