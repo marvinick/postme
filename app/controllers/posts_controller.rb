@@ -1,10 +1,13 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update]
+  # 1. set up something
+  # 2. redirect away from action
+
   def index
     @posts = Post.all
   end
 
   def show
-    @post = Post.find(params[:id])
     @comment = Comment.new
   end
 
@@ -25,14 +28,12 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       flash[:notice] = "This post was updated!"
-      redirect_to post_path
+      redirect_to post_path(@post)
     else
       render :edit
     end
@@ -44,6 +45,10 @@ class PostsController < ApplicationController
    # if user.admin?
       # params.require(:post).permit!
   params.require(:post).permit(:title, :url, :description)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 
 end
