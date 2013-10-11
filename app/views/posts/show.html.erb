@@ -1,6 +1,7 @@
 <h4>Showing Posts</h4>
-<%= @post.title %>
+<%= link_to @post.title, fix_url(@post.url) %>
 
+<h4>Create a comment</h4>
 <%= form_for [@post, @comment] do |f| %>
   <%= f.text_area :body %>
   <br/>
