@@ -2,9 +2,12 @@
 
 <%= render 'shared/errors', obj: @category %>
 
-<%= form_for @category do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name%>
-  <br/>
-  <%= f.submit "Create Category", class: "btn btn-primary" %>
-<% end %>
+<div class='well'>
+  <%= form_for @category do |f| %>
+      <div class='control-group'>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      </div>
+      <%= f.submit 'Create Category', class: 'btn btn-success' %>
+  <% end %>
+</div>

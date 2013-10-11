@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(params.require(:category).permit(:name))
     if @category.save
-      redirect_to posts_path, notice: "Category was created!"
+      redirect_to main_path notice: "Category was created!"
     else
       render :new
     end
