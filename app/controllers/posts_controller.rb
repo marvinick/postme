@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   def post_params
    # if user.admin?
       # params.require(:post).permit!
-  params.require(:post).permit(:title, :url, :description)
+  params.require(:post).permit(:title, :url, :description, category_ids: [])
   end
 
   def set_post
