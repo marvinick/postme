@@ -1,13 +1,15 @@
-<h3>New Category</h3>
+<div class="alert alert-success">
+  <h3>New Category</h3>
 
-<%= render 'shared/errors', obj: @category %>
+  <%= render 'shared/errors', obj: @category %>
 
-<div class='well'>
-  <%= form_for @category do |f| %>
-      <div class='control-group'>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      </div>
-      <%= f.submit 'Create Category', class: 'btn btn-success' %>
-  <% end %>
+  <div class='well'>
+    <%= form_for @category do |f| %>
+        <div class='control-group'>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        </div>
+        <%= f.submit 'Create Category', class: 'btn btn-success' %>
+    <% end %>
+  </div>
 </div>

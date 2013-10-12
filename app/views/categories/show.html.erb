@@ -1,10 +1,9 @@
-
 <h4>Category : <%= @category.name %></h4>
 
 <ul>
   <% @category.posts.each do |post| %>
   <li>
-    <%= link_to post.title, fix_url(post.url) %>
+    <%= link_to post.title, post_path(post) %>
   </li>
   <% end %>
 </ul>

@@ -1,8 +1,12 @@
-<h4>Showing Posts</h4>
-<%= link_to @post.title, fix_url(@post.url) %>
+<div class='alert alert-info'>
+<h3>Post</h3>
+<br/>
+<h4><%= link_to @post.title, fix_url(@post.url) %></h3>
+<h5><%= @post.description %></h5>
+
+<br/>
 
 <%= render 'shared/errors', obj: @comment %>
-<h4>Create a comment</h4>
 <%= form_for [@post, @comment] do |f| %>
   <%= f.label :body, "Leave a comment" %>
   <%= f.text_area :body, rows: 5 %>
@@ -12,8 +16,9 @@
 
 <h5>Comments:</h5>
 <ul>
-  <% @post.reload.comments.each do |comment| %>
+  <% @post.comments.reload.each do |comment| %>
     <li><%= comment.body %></li>
     created at <%= display_datetime(comment.created_at) %>
   <% end %>
 </ul>
+</div>

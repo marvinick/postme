@@ -1,9 +1,12 @@
 <ul class="nav">
   <li>
-    <%= link_to "PostMe!", main_path, :class => 'brand' %>
+    <%= link_to "Click!", main_path, :class => 'brand' %>
   </li>
   <li>
-    <%= link_to 'New Post', new_post_path %>
+    <%= link_to 'Create Post', new_post_path %>
+  </li>
+  <li>
+    <%= link_to 'Create Category', new_category_path %>
   </li>
 </ul>
 
@@ -17,7 +20,6 @@
         <%= link_to category.name, category_path(category) %>
       </li>
     <% end %>
-     <% #if logged.in? %>
       <li class='divider'></li>
       <li>
         <% link_to(new_category_path) do %>
@@ -25,6 +27,5 @@
           New Category
         <% end %>
       </li>
-    <% #end %>
   </ul>
 </div>
