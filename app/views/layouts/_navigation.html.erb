@@ -36,6 +36,7 @@
   </li>
 
   <% if logged_in? %>
+    <li>Hi <%= current_user.username %>
     <li>
       <%= link_to 'Log out', logout_path %>
     </li>
@@ -45,7 +46,7 @@
     </li>
     <li>
       <%= link_to 'Log in', login_path %>
-      <% end %>
+    <% end %>
     </li>
 </ul>
 

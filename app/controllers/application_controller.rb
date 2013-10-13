@@ -6,13 +6,18 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
   def current_user
-    # if there's authenticated user, return the user obj
-    # else return nil
-    User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
   def logged_in?
     !!current_user
+  end
+
+  def require_user
+    if !logged_in?
+      flash[:error] = "Need to log in to do that"
+      redirect_to main_path
+    end
   end
 
 end

@@ -6,21 +6,23 @@
 <h5><%= @post.description %></h5>
 
 <br/>
-
+<% if logged_in? %>
 <%= render 'shared/errors', obj: @comment %>
-<%= form_for [@post, @comment] do |f| %>
-  <%= f.label :body, "Leave a comment" %>
-  <%= f.text_area :body, rows: 5 %>
-  <br/>
-  <%= f.submit "Create Comment", class: "btn btn-primary" %>
+  <%= form_for [@post, @comment] do |f| %>
+    <%= f.label :body, "Leave a comment" %>
+    <%= f.text_area :body, rows: 5 %>
+    <br/>
+    <%= f.submit "Create Comment", class: "btn btn-primary" %>
+  <% end %>
 <% end %>
 
 <h5>Comments:</h5>
-<ul>
+  <ul>
   <% @post.comments.reload.each do |comment| %>
     <li><%= comment.body %></li>
-    created at <%= show_datetime(comment.created_at) %>
-  <% end %>
-</ul>
+            created at <%= show_datetime(comment.created_at) %>
+            <% end %>
+  </ul>
+
 </div>
 </div>
