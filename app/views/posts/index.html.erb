@@ -1,14 +1,21 @@
-<div class="alert alert-success">
+<div class='row'>
+<div class="span9">
+<div class='alert alert-success'>
   <h3>Welcome!</h3>
 
   <ul>
     <% @posts.each do |post| %>
-    <li>
-     <%= link_to post.title, post_path(post) %>
-      [<%= link_to 'edit', edit_post_path(post) %>]
-    <br/>
-    created at <%= display_datetime(post.created_at) %>
-    </li>
-      <% end %>
+      <div class='alert alert-info'>
+        <li>
+          <%= link_to post.title, post_path(post) %>
+          [<%= link_to 'edit', edit_post_path(post) %>]
+          <br/>
+          created at <%= show_datetime(post.created_at) %>
+        </li>
+      </div>
+    <% end %>
   </ul>
 </div>
+</div>
+</div>
+

@@ -1,3 +1,4 @@
+<div class='span9'>
 <div class='alert alert-info'>
 <h3>Post</h3>
 <br/>
@@ -18,7 +19,8 @@
 <ul>
   <% @post.comments.reload.each do |comment| %>
     <li><%= comment.body %></li>
-    created at <%= display_datetime(comment.created_at) %>
+    created at <%= show_datetime(comment.created_at) %>
   <% end %>
 </ul>
+</div>
 </div>

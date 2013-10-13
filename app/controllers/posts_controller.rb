@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update]
   # 1. set up something
   # 2. redirect away from action
