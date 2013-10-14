@@ -18,7 +18,7 @@
 
   def create
     @post = Post.new(post_params)
-    @post.user = current_user
+    @post.creator = current_user
     if @post.save
       flash[:notice] = "Your post was saved."
       redirect_to posts_path
@@ -39,6 +39,13 @@
       render :edit
     end
   end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:notice] = "A post has just been deleted"
+    redirect_to posts_path
+end
 
   private
 

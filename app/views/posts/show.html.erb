@@ -20,7 +20,7 @@
   <ul>
   <% @post.comments.reload.each do |comment| %>
     <li><%= comment.body %></li>
-            created at <%= show_datetime(comment.created_at) %>
+            posted @ <%= show_datetime(comment.created_at) %>
             <% end %>
   </ul>
 
