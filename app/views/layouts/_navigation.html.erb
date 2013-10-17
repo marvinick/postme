@@ -6,9 +6,6 @@
   <li>
     <%= link_to 'Create Post', new_post_path %>
   </li>
-  <li>
-    <%= link_to 'Create Category', new_category_path %>
-  </li>
   <% end %>
   <div class='btn-group nav_item'>
     <%= link_to '#', class: 'btn btn-small dropdown-toggle', 'data-toggle' => 'dropdown' do %>
@@ -20,13 +17,17 @@
           <%= link_to category.name, category_path(category) %>
         </li>
       <% end %>
+
+      <% if logged_in? %>
         <li class='divider'></li>
         <li>
-          <% link_to(new_category_path) do %>
+          <%= link_to(new_category_path) do %>
             <i class="icon-plus"></i>
             New Category
           <% end %>
         </li>
+      <% end %>
+
     </ul>
   </div>
 
@@ -39,12 +40,12 @@
     </li>
   <% else %>
     <li>
-      <%= link_to 'Sign up', register_path %>
+      <%= link_to 'Log in', login_path %>
     </li>
     <li>
-      <%= link_to 'Log in', login_path %>
-    <% end %>
+      <%= link_to 'Sign up', register_path %>
     </li>
+  <% end %>
 </ul>
 
 
