@@ -8,7 +8,17 @@ PostitTemplate::Application.routes.draw do
 
 
   resources :posts do
-    resources :comments, only: [:new, :create, :show]
+      member do
+        post 'vote'
+    end
+
+
+
+    resources :comments, only: [:new, :create, :show, :vote] do
+      member do
+        post 'vote'
+      end
+    end
   end
 
   resources :categories, only: [:new, :create, :show]

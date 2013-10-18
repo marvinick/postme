@@ -13,6 +13,11 @@ def create
     end
   end
 
+def vote
+    Vote.create(voteable: @comment, creator: current_user, vote: params[:vote] )
+    redirect_to :back, notice: "Your vote was counted"
+end
+
   def comment_params
     params.require(:comment).permit(:body)
   end

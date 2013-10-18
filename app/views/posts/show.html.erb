@@ -19,9 +19,21 @@
 <h5>Comments:</h5>
   <ul>
   <% @post.comments.reload.each do |comment| %>
-    <li><%= comment.body %></li>
+    <li>
+        <% if logged_in? %>
+              <%= link_to vote_post_comment_path(comment.post, comment, vote: 'true'), method: 'post' do %>
+                <i class='icon-arrow-up'></i>
+                <% end %>
+            <%= comment.post.total_votes %>
+
+              <%= link_to vote_post_comment_path(comment.post, comment, vote: 'false'), method: 'post' do %>
+                <i class='icon-arrow-down'></i>
+                <% end %>
+        <%= comment.body %>
+        <% end %>
             posted @ <%= show_datetime(comment.created_at) %>
-            <% end %>
+      <% end %>
+    </li>
   </ul>
 
 </div>
