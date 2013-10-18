@@ -5,12 +5,20 @@
     <% @posts.each do |post| %>
       <div class='alert alert-info'>
         <li>
+        <% if logged_in? %>
+          <%= link_to '' do %>
+            <i class='icon-arrow-up'></i>
+            <% end %>
+          <%= link_to '' do %>
+            <i class='icon-arrow-down'></i>
+            <% end %>
+        <% end %>
           <%= link_to post.title, post_path(post) %>
-          <% if logged_in? %>
+        <% if logged_in? %>
           [<%= link_to 'edit', edit_post_path(post)  %>]
           [<%= link_to 'delete', post_path(post),
                     method: :delete, data: { confirm: 'Are you sure?' } %>]
-          <% end %>
+        <% end %>
           <br/>
           posted @ <%= show_datetime(post.created_at) %>
         </li>
