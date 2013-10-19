@@ -25434,3 +25434,1812 @@ Processing by PostsController#index as HTML
   Rendered layouts/_navigation.html.erb (2.6ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 56ms (Views: 39.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-18 15:33:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (79.0ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (19.1ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 527ms (Views: 369.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-18 15:33:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (5.9ms)
+  [1m[36mComment Load (0.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  Rendered posts/show.html.erb within layouts/application (95.0ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (3.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 124ms (Views: 110.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-18 15:34:22 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.6ms)
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (88.9ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (19.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 150ms (Views: 116.9ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/posts/5/comments/18/vote?vote=true" for 127.0.0.1 at 2013-10-18 15:34:26 -0500
+Processing by CommentsController#vote as HTML
+  Parameters: {"authenticity_token"=>"y50lT81IONEzj6NYmTt0n18YsTxPKL5jXi2afiy5GWY=", "vote"=>"true", "post_id"=>"5", "id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (5.4ms)[0m  [1mINSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 18 Oct 2013 20:34:26 UTC +00:00], ["updated_at", Fri, 18 Oct 2013 20:34:26 UTC +00:00], ["user_id", 5], ["vote", true]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 34ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-18 15:34:26 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (22.9ms)
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (5.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 42.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-18 15:36:10 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (42.2ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (52.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 153ms (Views: 105.5ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/posts/7/vote?vote=false" for 127.0.0.1 at 2013-10-18 15:36:14 -0500
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"y50lT81IONEzj6NYmTt0n18YsTxPKL5jXi2afiy5GWY=", "vote"=>"false", "id"=>"7"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote", "voteable_id", "voteable_type") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 18 Oct 2013 20:36:14 UTC +00:00], ["updated_at", Fri, 18 Oct 2013 20:36:14 UTC +00:00], ["user_id", 5], ["vote", false], ["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-18 15:36:14 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (21.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 39.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-18 15:40:12 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (16.6ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 29.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-18 15:40:13 -0500
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered posts/_form.html.erb (91.1ms)
+  Rendered posts/new.html.erb within layouts/application (93.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 110.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/14" for 127.0.0.1 at 2013-10-18 15:40:15 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" INNER JOIN "post_categories" ON "posts"."id" = "post_categories"."post_id" WHERE "post_categories"."category_id" = ?[0m  [["category_id", 14]]
+  Rendered categories/show.html.erb within layouts/application (17.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 33.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2013-10-18 15:40:16 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 10], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 10], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 11], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 11], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 16], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 16], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 17], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 17], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (45.1ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 57.3ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/posts/3/comments/10/vote?vote=false" for 127.0.0.1 at 2013-10-18 15:40:18 -0500
+Processing by CommentsController#vote as HTML
+  Parameters: {"authenticity_token"=>"y50lT81IONEzj6NYmTt0n18YsTxPKL5jXi2afiy5GWY=", "vote"=>"false", "post_id"=>"3", "id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote") VALUES (?, ?, ?, ?)  [["created_at", Fri, 18 Oct 2013 20:40:18 UTC +00:00], ["updated_at", Fri, 18 Oct 2013 20:40:18 UTC +00:00], ["user_id", 5], ["vote", false]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2013-10-18 15:40:18 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 10], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 10], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 11], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 11], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 16], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 16], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 17], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 17], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (19.2ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 33.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/posts/3/comments/10/vote?vote=true" for 127.0.0.1 at 2013-10-18 15:41:48 -0500
+Processing by CommentsController#vote as HTML
+  Parameters: {"authenticity_token"=>"y50lT81IONEzj6NYmTt0n18YsTxPKL5jXi2afiy5GWY=", "vote"=>"true", "post_id"=>"3", "id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote") VALUES (?, ?, ?, ?)  [["created_at", Fri, 18 Oct 2013 20:41:48 UTC +00:00], ["updated_at", Fri, 18 Oct 2013 20:41:48 UTC +00:00], ["user_id", 5], ["vote", true]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 82ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2013-10-18 15:41:49 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 10], ["voteable_type", "Comment"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 10], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 11], ["voteable_type", "Comment"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 11], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 16], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 16], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 17], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 17], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (43.0ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (22.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 113ms (Views: 73.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-18 23:36:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (8.9ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (19.4ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 396ms (Views: 253.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-10-18 23:36:44 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-10-18 23:36:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "username"=>"ace", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'ace' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 194ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-18 23:36:50 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (19.3ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 32.9ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/posts/5/vote?vote=true" for 127.0.0.1 at 2013-10-18 23:36:52 -0500
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"true", "id"=>"5"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote", "voteable_id", "voteable_type") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 19 Oct 2013 04:36:52 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 04:36:52 UTC +00:00], ["user_id", 5], ["vote", true], ["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-18 23:36:52 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (19.5ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 33.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-18 23:36:55 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.8ms)
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (81.7ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 94.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-19 13:08:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (8.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (19.1ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 382ms (Views: 241.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-10-19 13:08:52 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (5.5ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2013-10-19 13:08:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "username"=>"ace", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'ace' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 157ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-19 13:08:55 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (25.4ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 40.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:08:57 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (5.7ms)
+  [1m[36mComment Load (0.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (94.1ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 119ms (Views: 105.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-19 13:09:44 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (62.3ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_messages.html.erb (11.9ms)
+Completed 200 OK in 178ms (Views: 117.2ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/posts/6/vote?vote=true" for 127.0.0.1 at 2013-10-19 13:09:49 -0500
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"true", "id"=>"6"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.1ms)[0m  begin transaction
+  [1m[36mSQL (55.7ms)[0m  [1mINSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote", "voteable_id", "voteable_type") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Oct 2013 18:09:49 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 18:09:49 UTC +00:00], ["user_id", 5], ["vote", true], ["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 244ms (ActiveRecord: 58.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-19 13:09:50 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (32.8ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 84ms (Views: 56.1ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/posts/7/vote?vote=false" for 127.0.0.1 at 2013-10-19 13:09:59 -0500
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"false", "id"=>"7"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote", "voteable_id", "voteable_type") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Oct 2013 18:09:59 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 18:09:59 UTC +00:00], ["user_id", 5], ["vote", false], ["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (12.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-19 13:09:59 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (69.1ms)
+  [1m[36mCategory Load (3.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (215.0ms)
+  Rendered layouts/_messages.html.erb (5.0ms)
+Completed 200 OK in 397ms (Views: 336.5ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/posts/7/vote?vote=false" for 127.0.0.1 at 2013-10-19 13:10:01 -0500
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"false", "id"=>"7"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote", "voteable_id", "voteable_type") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Oct 2013 18:10:01 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 18:10:01 UTC +00:00], ["user_id", 5], ["vote", false], ["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-19 13:10:01 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (709.2ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 752ms (Views: 728.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/posts/8" for 127.0.0.1 at 2013-10-19 13:10:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 25], ["voteable_type", "Comment"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 25], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (27.3ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 51.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/posts/8/comments/25/vote?vote=true" for 127.0.0.1 at 2013-10-19 13:10:12 -0500
+Processing by CommentsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"true", "post_id"=>"8", "id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 19 Oct 2013 18:10:12 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 18:10:12 UTC +00:00], ["user_id", 5], ["vote", true]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/8
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/8" for 127.0.0.1 at 2013-10-19 13:10:12 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.6ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 8]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 25], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 25], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (11.8ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 1.3ms)
+  [1m[36mComment Load (7.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mVote Load (0.4ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ?  [["voteable_id", 1], ["voteable_type", "Comment"]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" ORDER BY "comments"."id" DESC LIMIT 1[0m
+  [1m[35mVote Load (0.4ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ?  [["voteable_id", 25], ["voteable_type", "Comment"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote", "voteable_id", "voteable_type") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 19 Oct 2013 18:48:16 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 18:48:16 UTC +00:00], ["user_id", 5], ["vote", false], ["voteable_id", 25], ["voteable_type", "Comment"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:53:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (3.4ms)
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (123.2ms)
+Completed 500 Internal Server Error in 239ms
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00000100fd47c8>:0x00000100fd3ad0>):
+    24:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'true'), method: 'post' do %>
+    25:                 <i class='icon-arrow-up'></i>
+    26:                 <% end %>
+    27:             <%= post.comment.votes_total %>
+    28: 
+    29:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'false'), method: 'post' do %>
+    30:                 <i class='icon-arrow-down'></i>
+  app/views/posts/show.html.erb:27:in `block in _app_views_posts_show_html_erb___4579486195496321724_2161309840'
+  app/views/posts/show.html.erb:21:in `_app_views_posts_show_html_erb___4579486195496321724_2161309840'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.4ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:53:20 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (1.0ms)
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (22.6ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00000100fd47c8>:0x0000010376e9a0>):
+    24:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'true'), method: 'post' do %>
+    25:                 <i class='icon-arrow-up'></i>
+    26:                 <% end %>
+    27:             <%= post.comment.votes_total %>
+    28: 
+    29:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'false'), method: 'post' do %>
+    30:                 <i class='icon-arrow-down'></i>
+  app/views/posts/show.html.erb:27:in `block in _app_views_posts_show_html_erb___4579486195496321724_2176573120'
+  app/views/posts/show.html.erb:21:in `_app_views_posts_show_html_erb___4579486195496321724_2176573120'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:53:32 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00000100fd47c8>:0x00000100d72070>):
+    24:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'true'), method: 'post' do %>
+    25:                 <i class='icon-arrow-up'></i>
+    26:                 <% end %>
+    27:             <%= post.comment.votes_total %>
+    28: 
+    29:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'false'), method: 'post' do %>
+    30:                 <i class='icon-arrow-down'></i>
+  app/views/posts/show.html.erb:27:in `block in _app_views_posts_show_html_erb___4579486195496321724_2176573120'
+  app/views/posts/show.html.erb:21:in `_app_views_posts_show_html_erb___4579486195496321724_2176573120'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:53:50 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `votes_total' for #<Post:0x000001051305a0>):
+    24:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'true'), method: 'post' do %>
+    25:                 <i class='icon-arrow-up'></i>
+    26:                 <% end %>
+    27:             <%= comment.post.votes_total %>
+    28: 
+    29:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'false'), method: 'post' do %>
+    30:                 <i class='icon-arrow-down'></i>
+  app/views/posts/show.html.erb:27:in `block in _app_views_posts_show_html_erb___4579486195496321724_2193536040'
+  app/views/posts/show.html.erb:21:in `_app_views_posts_show_html_erb___4579486195496321724_2193536040'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:54:23 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (18.2ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined local variable or method `votes_total' for #<#<Class:0x00000100fd47c8>:0x00000101b03dd8>):
+    24:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'true'), method: 'post' do %>
+    25:                 <i class='icon-arrow-up'></i>
+    26:                 <% end %>
+    27:             <%= comment.post votes_total %>
+    28: 
+    29:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'false'), method: 'post' do %>
+    30:                 <i class='icon-arrow-down'></i>
+  app/views/posts/show.html.erb:27:in `block in _app_views_posts_show_html_erb___4579486195496321724_2161644800'
+  app/views/posts/show.html.erb:21:in `_app_views_posts_show_html_erb___4579486195496321724_2161644800'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.0ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:54:44 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `votes_total' for #<Post:0x00000103107bc0>):
+    24:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'true'), method: 'post' do %>
+    25:                 <i class='icon-arrow-up'></i>
+    26:                 <% end %>
+    27:             <%= comment.post.votes_total %>
+    28: 
+    29:               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'false'), method: 'post' do %>
+    30:                 <i class='icon-arrow-down'></i>
+  app/views/posts/show.html.erb:27:in `block in _app_views_posts_show_html_erb___4579486195496321724_2161349520'
+  app/views/posts/show.html.erb:21:in `_app_views_posts_show_html_erb___4579486195496321724_2161349520'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:55:01 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (36.1ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (46.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 236ms (Views: 229.5ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/posts/5/comments/18/vote?vote=false" for 127.0.0.1 at 2013-10-19 13:55:05 -0500
+Processing by CommentsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"false", "post_id"=>"5", "id"=>"18"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote") VALUES (?, ?, ?, ?)  [["created_at", Sat, 19 Oct 2013 18:55:05 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 18:55:05 UTC +00:00], ["user_id", 5], ["vote", false]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 37ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:55:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (12.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:55:30 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (No route matches {:action=>"vote", :controller=>"comments", :id=>nil, :post_id=>#<Post id: 5, url: "sony.com", title: "This is sparta ", description: "300 is one of the coolest movie", created_at: "2013-10-11 14:13:30", updated_at: "2013-10-15 14:08:14", user_id: nil>, :format=>nil, :vote=>"true"} missing required keys: [:id]):
+    21:   <% @post.comments.reload.each do |comment| %>
+    22:     <li>
+    23:         <% if logged_in? %>
+    24:               <%= link_to vote_post_comment_path(comment.post, vote: 'true'), method: 'post' do %>
+    25:                 <i class='icon-arrow-up'></i>
+    26:                 <% end %>
+    27:             <%= comment.votes_total %>
+  app/views/posts/show.html.erb:24:in `block in _app_views_posts_show_html_erb___4579486195496321724_2163178360'
+  app/views/posts/show.html.erb:21:in `_app_views_posts_show_html_erb___4579486195496321724_2163178360'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.2ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:55:54 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+ERROR: compiling _app_views_posts_show_html_erb___4579486195496321724_2162072600 RAISED /Users/marvin8214/Desktop/postme/app/views/posts/show.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...path(comment.post, comment vote: 'true'), method: 'post' do ...
+...                               ^
+/Users/marvin8214/Desktop/postme/app/views/posts/show.html.erb:24: syntax error, unexpected ')', expecting keyword_end
+...ent.post, comment vote: 'true'), method: 'post' do @output_b...
+...                               ^
+/Users/marvin8214/Desktop/postme/app/views/posts/show.html.erb:24: syntax error, unexpected keyword_do_block, expecting keyword_end
+...ote: 'true'), method: 'post' do @output_buffer.safe_append='
+...                               ^
+/Users/marvin8214/Desktop/postme/app/views/posts/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_posts_show_html_erb___4579486195496321724_2162072600(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "posts/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<div class=\'span9\'>
+<div class=\'alert alert-info\'>
+<h3>Post</h3>
+<br/>
+<h4>';@output_buffer.append=( link_to @post.title, fix_url(@post.url) );@output_buffer.safe_append='</h3>
+<h5>';@output_buffer.append=( @post.description );@output_buffer.safe_append='</h5>
+
+<br/>
+'; if logged_in? 
+@output_buffer.append=( render 'shared/errors', obj: @comment );@output_buffer.safe_append='
+  ';@output_buffer.append=  form_for [@post, @comment] do |f| @output_buffer.safe_append='
+    ';@output_buffer.append=( f.label :body, "Leave a comment" );@output_buffer.safe_append='
+    ';@output_buffer.append=( f.text_area :body, rows: 5 );@output_buffer.safe_append='
+    <br/>
+    ';@output_buffer.append=( f.submit "Create Comment", class: "btn btn-primary" );@output_buffer.safe_append='
+';   end 
+ end 
+@output_buffer.safe_append='
+<h5>Comments:</h5>
+  <ul>
+';   @post.comments.reload.each do |comment| 
+@output_buffer.safe_append='    <li>
+';         if logged_in? 
+@output_buffer.safe_append='              ';@output_buffer.append=  link_to vote_post_comment_path(comment.post, comment vote: 'true'), method: 'post' do @output_buffer.safe_append='
+                <i class=\'icon-arrow-up\'></i>
+';                 end 
+@output_buffer.safe_append='            ';@output_buffer.append=( comment.votes_total );@output_buffer.safe_append='
+
+              ';@output_buffer.append=  link_to vote_post_comment_path(comment.post, comment, vote: 'false'), method: 'post' do @output_buffer.safe_append='
+                <i class=\'icon-arrow-down\'></i>
+';                 end 
+@output_buffer.safe_append='        ';@output_buffer.append=( comment.body );@output_buffer.safe_append='
+';         end 
+@output_buffer.safe_append='            posted @ ';@output_buffer.append=( show_datetime(comment.created_at) );@output_buffer.safe_append='
+';       end 
+@output_buffer.safe_append='    </li>
+  </ul>
+
+</div>
+</div>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:423:in `_run__718910413624044539__process_action__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__3248247546047848272__call__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered posts/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (/Users/marvin8214/Desktop/postme/app/views/posts/show.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...path(comment.post, comment vote: 'true'), method: 'post' do ...
+...                               ^
+/Users/marvin8214/Desktop/postme/app/views/posts/show.html.erb:24: syntax error, unexpected ')', expecting keyword_end
+...ent.post, comment vote: 'true'), method: 'post' do @output_b...
+...                               ^
+/Users/marvin8214/Desktop/postme/app/views/posts/show.html.erb:24: syntax error, unexpected keyword_do_block, expecting keyword_end
+...ote: 'true'), method: 'post' do @output_buffer.safe_append='
+...                               ^
+/Users/marvin8214/Desktop/postme/app/views/posts/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting $end):
+    21:   <% @post.comments.reload.each do |comment| %>
+    22:     <li>
+    23:         <% if logged_in? %>
+    24:               <%= link_to vote_post_comment_path(comment.post, comment vote: 'true'), method: 'post' do %>
+    25:                 <i class='icon-arrow-up'></i>
+    26:                 <% end %>
+    27:             <%= comment.votes_total %>
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.0) lib/action_view/template.rb:248:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.0) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.0) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:423:in `_run__718910413624044539__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3248247546047848272__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.2ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:56:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (16.6ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (4.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 33.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:56:55 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered posts/show.html.erb within layouts/application (49.4ms)
+Completed 500 Internal Server Error in 54ms
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00000100fd47c8>:0x000001052768b0>):
+    21:   <% @post.comments.reload.each do |comment| %>
+    22:     <li>
+    23:         <% if logged_in? %>
+    24:               <%= link_to vote_post_comment_path(post.comment, comment, vote: 'true'), method: 'post' do %>
+    25:                 <i class='icon-arrow-up'></i>
+    26:                 <% end %>
+    27:             <%= comment.votes_total %>
+  app/views/posts/show.html.erb:24:in `block in _app_views_posts_show_html_erb___4579486195496321724_2193208420'
+  app/views/posts/show.html.erb:21:in `_app_views_posts_show_html_erb___4579486195496321724_2193208420'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.3ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:57:25 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (17.4ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/posts/5/comments/24/vote?vote=false" for 127.0.0.1 at 2013-10-19 13:57:30 -0500
+Processing by CommentsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"false", "post_id"=>"5", "id"=>"24"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote") VALUES (?, ?, ?, ?)  [["created_at", Sat, 19 Oct 2013 18:57:30 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 18:57:30 UTC +00:00], ["user_id", 5], ["vote", false]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 15ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 13:57:30 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (12.0ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-19 14:03:51 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (23.6ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 39.3ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/posts/6/vote?vote=false" for 127.0.0.1 at 2013-10-19 14:03:53 -0500
+Processing by PostsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"false", "id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote", "voteable_id", "voteable_type") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 19 Oct 2013 19:03:53 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 19:03:53 UTC +00:00], ["user_id", 5], ["vote", false], ["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-19 14:03:53 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (18.1ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 30.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 14:03:59 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (18.9ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/posts/5/comments/18/vote?vote=true" for 127.0.0.1 at 2013-10-19 14:04:01 -0500
+Processing by CommentsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"true", "post_id"=>"5", "id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 19 Oct 2013 19:04:01 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 19:04:01 UTC +00:00], ["user_id", 5], ["vote", true]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 9ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 14:04:02 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (15.2ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 14:07:28 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (52.7ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (47.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 107.8ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/posts/5/comments/18/vote?vote=true" for 127.0.0.1 at 2013-10-19 14:07:32 -0500
+Processing by CommentsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"true", "post_id"=>"5", "id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant CommentsController::Votes):
+  app/controllers/comments_controller.rb:17:in `vote'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.6ms)
+
+
+Started GET "/posts/5/comments/18/vote?vote=true" for 127.0.0.1 at 2013-10-19 14:07:47 -0500
+
+ActionController::RoutingError (No route matches [GET] "/posts/5/comments/18/vote"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (41.7ms)
+
+
+Started POST "/posts/5/comments/24/vote?vote=true" for 127.0.0.1 at 2013-10-19 14:07:52 -0500
+Processing by CommentsController#vote as HTML
+  Parameters: {"authenticity_token"=>"z7StDCm088A95Aa/eIkg2VtrBv+45UIMM1Ue0DYPrH8=", "vote"=>"true", "post_id"=>"5", "id"=>"24"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "votes" ("created_at", "updated_at", "user_id", "vote") VALUES (?, ?, ?, ?)  [["created_at", Sat, 19 Oct 2013 19:07:52 UTC +00:00], ["updated_at", Sat, 19 Oct 2013 19:07:52 UTC +00:00], ["user_id", 5], ["vote", true]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 86ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 14:07:52 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (30.6ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (16.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 89ms (Views: 57.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2013-10-19 14:08:00 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" INNER JOIN "post_categories" ON "posts"."id" = "post_categories"."post_id" WHERE "post_categories"."category_id" = ?[0m  [["category_id", 8]]
+  Rendered categories/show.html.erb within layouts/application (54.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2013-10-19 14:08:02 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" INNER JOIN "post_categories" ON "posts"."id" = "post_categories"."post_id" WHERE "post_categories"."category_id" = ?[0m  [["category_id", 2]]
+  Rendered categories/show.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2013-10-19 14:08:03 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 19], ["voteable_type", "Comment"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 19], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 22], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 22], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (15.9ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2013-10-19 14:09:40 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 19], ["voteable_type", "Comment"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 19], ["voteable_type", "Comment"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 22], ["voteable_type", "Comment"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 22], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (15.8ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 938ms (Views: 934.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-19 14:09:44 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 5], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 2], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 6], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 8], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 3], ["voteable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 7], ["voteable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 7], ["voteable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (23.9ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 37.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-10-19 14:10:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'[0m  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'  [["voteable_id", 18], ["voteable_type", "Comment"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 't'  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = ? AND "votes"."voteable_type" = ? AND "votes"."vote" = 'f'[0m  [["voteable_id", 24], ["voteable_type", "Comment"]]
+  Rendered posts/show.html.erb within layouts/application (17.9ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_navigation.html.erb (19.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 875ms (Views: 871.7ms | ActiveRecord: 1.8ms)
