@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_action :require_user
+  before_action :set_comment, only: [:show, :edit, :update, :vote]
 
 def create
     @post = Post.find(params[:post_id])
@@ -14,7 +15,7 @@ def create
   end
 
 def vote
-    Vote.create(voteable: @comment, creator: current_user, vote: params[:vote] )
+    Vote.create(voteable: @comment,  creator: current_user, vote: params[:vote] )
     redirect_to :back, notice: "Your vote was counted"
 end
 
@@ -22,3 +23,9 @@ end
     params.require(:comment).permit(:body)
   end
 end
+
+private
+
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
