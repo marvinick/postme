@@ -3,4 +3,6 @@ class Vote < ActiveRecord::Base
   belongs_to :comment
   belongs_to :voteable, polymorphic: true
 
+  validates :user_id, uniqueness: true
 end
+
