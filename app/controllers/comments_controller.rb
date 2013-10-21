@@ -16,7 +16,7 @@ def create
 
 def vote
     Vote.create(voteable: @comment,  creator: current_user, vote: params[:vote] )
-    redirect_to :back, notice: "Your vote was counted"
+    redirect_to :back, notice: "Your vote was counted once"
 end
 
   def comment_params
