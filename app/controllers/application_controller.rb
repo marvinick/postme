@@ -20,4 +20,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_admin
+    access_denied unless logged_in? and current_user.admin?
+  end
+
+  def access_denied
+    flash[:error] = "You have no clearance"
+    redirect_to main_path
+  end
+
 end
