@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = 'You are registered'
-      redirect_to main_path
+      redirect_to pmain_path
     else
       render :new
     end
