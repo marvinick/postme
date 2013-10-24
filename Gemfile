@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby'
+gem 'voteable_marv_oct'
 
 group :doc do
   gem 'sdoc', require: false
