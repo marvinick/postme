@@ -24,7 +24,7 @@
               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'true'), method: 'post' do %>
                 <i class='icon-arrow-up'></i>
                 <% end %>
-            <%= comment.votes_total %>
+            <%= comment.total_votes %>
 
 
               <%= link_to vote_post_comment_path(comment.post, comment, vote: 'false'), method: 'post' do %>
