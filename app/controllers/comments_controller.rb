@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :require_user
+  before_action :require_user, except: [:index, :show]
   before_action :set_comment, only: [:show, :edit, :update, :vote]
 
 def create

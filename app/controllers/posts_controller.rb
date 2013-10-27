@@ -1,6 +1,6 @@
  class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :vote]
-  before_action :require_user, except: [:index, :show, :vote]
+  before_action :require_user, except: [:index, :show]
   # 1. set up something
   # 2. redirect away from action
 
@@ -48,14 +48,20 @@
   end
 
   def vote
-    Vote.create(voteable: @post, creator: current_user, vote: params[:vote] )
+    @vote = Vote.create(voteable: @post, creator: current_user, vote: params[:vote] )
 
     respond_to do |format|
-    format.html {redirect_to :back, notice: "Your vote was counted once"}
-    format.js
+    format.html do
+      if @vote.valid?
+        flash[:notice] = "Your vote was counted"
+      else
+        flash[:error] = "You can only vote once"
+      end
+        redirect_to :back
     end
+    format.js
   end
-
+end
 
   private
 
